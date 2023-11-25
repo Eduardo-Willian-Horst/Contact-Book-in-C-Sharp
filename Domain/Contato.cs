@@ -43,8 +43,4 @@ abstract class Contato
        return phoneNumber;
     }
 
-
-
-
-
 }
