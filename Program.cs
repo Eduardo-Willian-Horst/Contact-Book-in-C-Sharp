@@ -5,10 +5,35 @@ namespace _01Conceito
 
     class Program
     {
+
         static void Main(string[] args)
         {
-            Contato contato = new Contato(1, "Teste", 999999);
-            Contato contato = new Contato(2, "Teste2", 888888);
+            
+            List<Contato> ListaDeContatos = new List<Contato>();
+            
+            try{
+                Contato Contato1 = new Amigo("Eduardo", "54991139901", "dudu");
+                Contato Contato2 = new Amigo("Lucas", "54991234123", "luquinhas");
+                Contato Contato3 = new Amigo("Andre", "55981234344", "degua");
+                ListaDeContatos.Add(Contato1);
+            }catch (Exception ex){
+                Console.WriteLine(ex);
+            }
+            
+
+            
+
+            
+
+            Console.WriteLine(ListaDeContatos[0]);
+            
+            
+
+
+
+
+
+            
         }
     }
 }

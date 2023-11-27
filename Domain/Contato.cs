@@ -1,46 +1,70 @@
 using System;
 
+// Classe abstrata Contato
 abstract class Contato
 {
+    private static int proximoId = 1;
+    // Atributos privados
     private int id;
     private string nome;
-    private int phoneNumber;
+    private string numeroTelefone;  
+    private Cidade? cidade;
 
-    public Contato(int id, string nome, int phoneNumber)
+    // Propriedades públicas para acesso aos atributos encapsulados
+    public int Id
     {
-        Set_ID(id);
-        Set_Nome(nome);
-        Set_phoneNumber(phoneNumber);
+        get { return id; }
     }
 
-    private void Set_ID(int id)
+    public string Nome
     {
-        this.id = id;
+        get { return nome; }
+        set { nome = value; }
     }
 
-    public void Set_Nome(string nome)
+    public string NumeroTelefone
     {
+        get { return numeroTelefone; }
+        set {
+
+                if(value.Length != 11){
+                    throw new ArgumentException("Numero de telefone inválido");
+                }
+
+                numeroTelefone = value; 
+             
+             }
+    }
+
+
+    // Construtor padrão
+    public Contato()
+    {
+        // Valores padrão para os atributos
+        id = proximoId++;
+        nome = "";
+        numeroTelefone = "";
+    }
+
+    // Construtor com parâmetros
+    public Contato(string nome, string numeroTelefone)
+    {
+        this.id = proximoId++;
         this.nome = nome;
+        this.numeroTelefone = numeroTelefone;
     }
 
-    public void Set_phoneNumber(int phoneNumber)
+    public Contato(string nome, string numeroTelefone, Cidade cidade)
     {
-        this.phoneNumber = phoneNumber;
+        this.id = proximoId++;
+        this.nome = nome;
+        this.numeroTelefone = numeroTelefone;
+        this.cidade = cidade;
     }
 
-    private int Get_ID()
+    // Método ToString para exibir informações do contato
+    public override string ToString()
     {
-        return id;
+        return $"ID: {id}, Nome: {nome}, Telefone: {numeroTelefone}";
     }
-
-    public string Get_Nome()
-    {
-        return nome;
-    }
-
-    public int Get_phoneNumber()
-    {
-       return phoneNumber;
-    }
-
 }

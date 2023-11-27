@@ -1,60 +1,45 @@
 using System;
 
+// Classe Cidade
 class Cidade
 {
+    // Atributos privados
+    private static int contadorIds = 1; // Variável estática para controlar os IDs das cidades
     private int id;
     private string nome;
     private string uf;
 
-    public Cidade()
+    // Propriedades públicas para acesso aos atributos encapsulados
+    public int Id
     {
+        get { return id; }
+        private set { id = value; }
     }
 
-    public Cidade(int id)
+    public string Nome
     {
-        this.id = id;
+        get { return nome; }
+        set { nome = value; }
     }
 
-    public Cidade(int id, string nome, string uf)
+    public string UF
     {
-        this.id = id;
+        get { return uf; }
+        set { uf = value; }
+    }
+
+    // Construtor com parâmetros
+    public Cidade(string nome, string uf)
+    {
+        this.Id = contadorIds; // Define o ID da cidade usando o contador
+        contadorIds++; // Incrementa o contador para o próximo ID disponível
         this.nome = nome;
         this.uf = uf;
     }
 
-    public int get_Id()
+    // Método ToString para exibir informações da cidade
+    public override string ToString()
     {
-        return id;
+        return $"ID: {Id}, Nome: {nome}, UF: {uf}";
     }
-
-    public void set_Id(int id)
-    {
-        this.id = id;
-    }
-
-    public string get_Nome()
-    {
-        return nome;
-    }
-
-    public void set_Nome(string nome)
-    {
-        this.nome = nome;
-    }
-
-    public string get_Uf()
-    {
-        return uf;
-    }
-
-    public void set_Uf(string uf)
-    {
-        this.uf = uf;
-    }
-
-    public void AdicionarCidade()
-    {
-        Cidade.add(Cidade);
-    }
-
 }

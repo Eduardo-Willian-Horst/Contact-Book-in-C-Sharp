@@ -1,54 +1,71 @@
 using System;
 
+// Classe Empresarial que herda da classe Contato
 class Empresarial : Contato
 {
+    // Atributos adicionais
     private string email;
     private string endereco;
 
-
-    public Empresarial(int id, string nome, int phoneNumber, string email, string endereco)
-    : base(id, nome, phoneNumber)
+    // Propriedades públicas para acesso aos atributos encapsulados
+    public string Email
     {
-        Set_Email(email);
-        Set_Endereco(endereco);
+        get { return email; }
+        set { email = value; }
     }
 
+    public string Endereco
+    {
+        get { return endereco; }
+        set { endereco = value; }
+    }
 
-    private void Set_Email(string email)
+    // Construtor padrão
+    public Empresarial()
+    {
+        // Inicialização dos atributos adicionais
+        email = "";
+        endereco = "";
+    }
+
+    // Construtor com parâmetros, aproveitando construtor da classe base (Contato)
+    public Empresarial(string nome, string numeroTelefone, string email, string endereco)
+        : base(nome, numeroTelefone) // Chama o construtor da classe base para inicializar os atributos id, nome e numeroTelefone
     {
         this.email = email;
-    }
-
-    public void Set_Endereco(string endereco)
-    {
         this.endereco = endereco;
     }
 
-    private string Get_Email()
+    public Empresarial(string nome, string numeroTelefone, string email, string endereco, Cidade cidade)
+        : base(nome, numeroTelefone, cidade) // Chama o construtor da classe base para inicializar os atributos id, nome, numeroTelefone e cidade
     {
-        return email;
+        this.email = email;
+        this.endereco = endereco;
     }
 
-    public string Get_Endereco()
-    {
-        return endereco;
-    }
 
-    // Método de negócio: Verifica se o e-mail é válido
-    public bool IsEmailValido()
+    // Método ToString para exibir informações do contato empresarial
+    public override string ToString()
     {
-        // Lógica para verificar a validade do e-mail
-        // Aqui, uma implementação simples que verifica se o e-mail contém "@" e "."
-        return Email.Contains("@") && Email.Contains(".");
-    }
-
-    // Método de negócio: Imprime informações detalhadas do contato empresarial
-    public void ImprimirInformacoesDetalhadas()
-    {
-        Console.WriteLine($"ID: {Id}");
-        Console.WriteLine($"Nome: {Nome}");
-        Console.WriteLine($"Telefone: {PhoneNumber}");
-        Console.WriteLine($"E-mail: {Email}");
-        Console.WriteLine($"Endereço: {Endereco}");
+        // Utiliza o ToString da classe base e adiciona informações dos atributos adicionais
+        return base.ToString() + $", Email: {email}, Endereco: {endereco}";
     }
 }
+
+    /* // Método de negócio: Verifica se o e-mail é válido */
+    /* public bool IsEmailValido() */
+    /* { */
+    /*     // Lógica para verificar a validade do e-mail */
+    /*     // Aqui, uma implementação simples que verifica s e o e-mail contém "@" e "."
+    /*     return Email.Contains("@") && Email.Contains(".") ;
+    /* } */
+
+    /* // Método de negócio: Imprime informações detalhadas  do contato empresarial
+    /* public void ImprimirInformacoesDetalhadas() */
+    /* { */
+    /*     Console.WriteLine($"ID: {Id}"); */
+    /*     Console.WriteLine($"Nome: {Nome}"); */
+    /*     Console.WriteLine($"Telefone: {PhoneNumber}"); */
+    /*     Console.WriteLine($"E-mail: {Email}"); */
+    /*     Console.WriteLine($"Endereço: {Endereco}"); */
+    /* } */
