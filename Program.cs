@@ -15,24 +15,13 @@ namespace _01Conceito
                 Contato Contato1 = new Amigo("Eduardo", "54991139901", "dudu");
                 Contato Contato2 = new Amigo("Lucas", "54991234123", "luquinhas");
                 Contato Contato3 = new Amigo("Andre", "55981234344", "degua");
+                Contato Contato4 = new Familia("Joao", "55981238855", "Primo", "Passo Fundo");
                 ListaDeContatos.Add(Contato1);
             }catch (Exception ex){
                 Console.WriteLine(ex);
             }
-            
-
-            
-
-            
 
             Console.WriteLine(ListaDeContatos[0]);
-            
-            
-
-
-
-
-
             
         }
     }
