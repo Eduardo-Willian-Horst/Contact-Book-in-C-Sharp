@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Victor\\.nuget\\packages\\": {}
+    "C:\\Users\\eduwi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Victor\\Documents\\Projetos\\Contact-Book-in-C-Sharp\\01.csproj",
+      "projectUniqueName": "C:\\Users\\eduwi\\OneDrive\\Área de Trabalho\\Nova pasta (2)\\Contact-Book-in-C-Sharp\\01.csproj",
       "projectName": "01",
-      "projectPath": "C:\\Users\\Victor\\Documents\\Projetos\\Contact-Book-in-C-Sharp\\01.csproj",
-      "packagesPath": "C:\\Users\\Victor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Victor\\Documents\\Projetos\\Contact-Book-in-C-Sharp\\obj\\",
+      "projectPath": "C:\\Users\\eduwi\\OneDrive\\Área de Trabalho\\Nova pasta (2)\\Contact-Book-in-C-Sharp\\01.csproj",
+      "packagesPath": "C:\\Users\\eduwi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\eduwi\\OneDrive\\Área de Trabalho\\Nova pasta (2)\\Contact-Book-in-C-Sharp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Victor\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\eduwi\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -9,6 +9,8 @@ class Cidade
     private string nome;
     private string uf;
 
+    private static List<Contato> ListaDeContatos = new List<Contato>();
+
     // Propriedades públicas para acesso aos atributos encapsulados
     public int Id
     {

@@ -29,6 +29,10 @@ class Amigo : Contato
         this.apelido = apelido;
     }
 
+    public Amigo(string nome, string numeroTelefone, string apelido, string nomeDaCidade , string ufcidade) : base(nome, numeroTelefone, nomeDaCidade, ufcidade)
+    {
+        this.apelido = apelido;
+    }
 
     // Substituição do método ToString para exibir informações do amigo
     public override string ToString()

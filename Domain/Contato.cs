@@ -28,7 +28,7 @@ abstract class Contato
         set {
 
                 if(value.Length != 11){
-                    throw new ArgumentException("Numero de telefone inválido");
+                    throw new Exception("Numero de telefone inválido");
                 }
 
                 numeroTelefone = value; 
@@ -61,6 +61,15 @@ abstract class Contato
         this.numeroTelefone = numeroTelefone;
         this.cidade = cidade;
     }
+
+    public Contato(string nome, string numeroTelefone, string nomeDaCidade, string UFCidade)
+    {
+        this.id = proximoId++;
+        this.nome = nome;
+        this.numeroTelefone = numeroTelefone;
+        cidade = new Cidade(nomeDaCidade, UFCidade);
+    }
+
 
     // Método ToString para exibir informações do contato
     public override string ToString()

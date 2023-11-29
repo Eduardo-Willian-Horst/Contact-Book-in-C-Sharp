@@ -31,6 +31,11 @@ class Familia : Contato
     }
 
 
+    public Familia(string nome, string numeroTelefone, string lacosParentesco, string nomeDaCidade , string ufcidade) : base(nome, numeroTelefone, nomeDaCidade, ufcidade)
+    {
+        this.lacosParentesco = lacosParentesco;
+    }
+
     // Substituição do método ToString para exibir informações do Familia
     public override string ToString()
     {

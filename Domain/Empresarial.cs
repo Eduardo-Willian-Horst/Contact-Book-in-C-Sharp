@@ -11,7 +11,8 @@ class Empresarial : Contato
     public string Email
     {
         get { return email; }
-        set { email = value; }
+        set { //this.email = value; 
+        throw new Exception("drgggggggg");}
     }
 
     public string Endereco
@@ -32,17 +33,37 @@ class Empresarial : Contato
     public Empresarial(string nome, string numeroTelefone, string email, string endereco)
         : base(nome, numeroTelefone) // Chama o construtor da classe base para inicializar os atributos id, nome e numeroTelefone
     {
-        this.email = email;
+        if(IsEmailValido(email)){
+            this.email = email;
+        }else{
+            throw new ArgumentException("Email invalido!!");
+        }
         this.endereco = endereco;
     }
 
     public Empresarial(string nome, string numeroTelefone, string email, string endereco, Cidade cidade)
         : base(nome, numeroTelefone, cidade) // Chama o construtor da classe base para inicializar os atributos id, nome, numeroTelefone e cidade
     {
-        this.email = email;
+
+        if(IsEmailValido(email)){
+            this.email = email;
+        }else{
+            throw new ArgumentException("Email invalido!!");
+        }
         this.endereco = endereco;
     }
 
+
+    public Empresarial(string nome, string numeroTelefone, string email, string endereco, string nomeDaCidade , string ufcidade) : base(nome, numeroTelefone, nomeDaCidade, ufcidade)// Chama o construtor da classe base para inicializar os atributos id, nome, numeroTelefone e cidade
+    {
+        if(IsEmailValido(email)){
+            this.email = email;
+        }else{
+            throw new ArgumentException("Email invalido!!");
+        }
+        
+        this.endereco = endereco;
+    }
 
     // Método ToString para exibir informações do contato empresarial
     public override string ToString()
@@ -50,22 +71,23 @@ class Empresarial : Contato
         // Utiliza o ToString da classe base e adiciona informações dos atributos adicionais
         return base.ToString() + $", Email: {email}, Endereco: {endereco}";
     }
+
+
+    
+    //Método de negócio: Verifica se o e-mail é válido 
+    private bool IsEmailValido( string emailAVerificar) 
+    { 
+      //Lógica para verificar a validade do e-mail 
+      //Aqui, uma implementação simples que verifica s e o e-mail contém "@" e "."
+      if(emailAVerificar.Contains("@") && emailAVerificar.Contains(".com")){
+        return true;
+      }
+       return false;
+    } 
+
+
+
 }
 
-    /* // Método de negócio: Verifica se o e-mail é válido */
-    /* public bool IsEmailValido() */
-    /* { */
-    /*     // Lógica para verificar a validade do e-mail */
-    /*     // Aqui, uma implementação simples que verifica s e o e-mail contém "@" e "."
-    /*     return Email.Contains("@") && Email.Contains(".") ;
-    /* } */
-
-    /* // Método de negócio: Imprime informações detalhadas  do contato empresarial
-    /* public void ImprimirInformacoesDetalhadas() */
-    /* { */
-    /*     Console.WriteLine($"ID: {Id}"); */
-    /*     Console.WriteLine($"Nome: {Nome}"); */
-    /*     Console.WriteLine($"Telefone: {PhoneNumber}"); */
-    /*     Console.WriteLine($"E-mail: {Email}"); */
-    /*     Console.WriteLine($"Endereço: {Endereco}"); */
-    /* } */
+    
+    
