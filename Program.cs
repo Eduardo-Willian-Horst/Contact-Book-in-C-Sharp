@@ -27,7 +27,7 @@ namespace _01Conceito
                 Contato Contato3 = new Amigo("Andre", "55981234344", "degua", Ibiruba);
                 Contato Contato4 = new Familia("Joao", "55981238855", "Primo", Palmas);
                 Contato Contato5 = new Empresarial("Financeira Dinheiro a Vista", "55957837890", "financeira@gmayl.com", "Rua das Flores", RioDeJaneiro);
-                Contato Contato6 = new Empresarial("Pedreiro Clovis", "55123467457", "clovishottmailcom", "Rua Sao Cristovao", Palmas);
+                Contato Contato6 = new Empresarial("Pedreiro Clovis", "55123467457", "clovis@hottmail.com", "Rua Sao Cristovao", Palmas);
                 Contato Contato7 = new Amigo("Eduardo", "54991139901", "dudu", "Sao Paulo", "SP");
                 ListaDeContatos.Add(Contato1);
                 ListaDeContatos.Add(Contato2);

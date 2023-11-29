@@ -49,6 +49,9 @@ abstract class Contato
     // Construtor com parâmetros
     public Contato(string nome, string numeroTelefone)
     {
+        if(numeroTelefone.Length != 11){
+            throw new Exception("Numero de telefone inválido");
+        }
         this.id = proximoId++;
         this.nome = nome;
         this.numeroTelefone = numeroTelefone;
@@ -56,6 +59,10 @@ abstract class Contato
 
     public Contato(string nome, string numeroTelefone, Cidade cidade)
     {
+        if(numeroTelefone.Length != 11){
+            throw new Exception("Numero de telefone inválido");
+        }
+
         this.id = proximoId++;
         this.nome = nome;
         this.numeroTelefone = numeroTelefone;
@@ -64,6 +71,10 @@ abstract class Contato
 
     public Contato(string nome, string numeroTelefone, string nomeDaCidade, string UFCidade)
     {
+        if(numeroTelefone.Length != 11){
+            throw new Exception("Numero de telefone inválido");
+        }
+
         this.id = proximoId++;
         this.nome = nome;
         this.numeroTelefone = numeroTelefone;

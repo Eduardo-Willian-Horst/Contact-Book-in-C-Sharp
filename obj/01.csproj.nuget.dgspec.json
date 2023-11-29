@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eduwi\\OneDrive\\Área de Trabalho\\Nova pasta (2)\\Contact-Book-in-C-Sharp\\01.csproj": {}
+    "C:\\Users\\eduwi\\OneDrive\\Área de Trabalho\\2911poo\\Contact-Book-in-C-Sharp\\01.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eduwi\\OneDrive\\Área de Trabalho\\Nova pasta (2)\\Contact-Book-in-C-Sharp\\01.csproj": {
+    "C:\\Users\\eduwi\\OneDrive\\Área de Trabalho\\2911poo\\Contact-Book-in-C-Sharp\\01.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eduwi\\OneDrive\\Área de Trabalho\\Nova pasta (2)\\Contact-Book-in-C-Sharp\\01.csproj",
+        "projectUniqueName": "C:\\Users\\eduwi\\OneDrive\\Área de Trabalho\\2911poo\\Contact-Book-in-C-Sharp\\01.csproj",
         "projectName": "01",
-        "projectPath": "C:\\Users\\eduwi\\OneDrive\\Área de Trabalho\\Nova pasta (2)\\Contact-Book-in-C-Sharp\\01.csproj",
+        "projectPath": "C:\\Users\\eduwi\\OneDrive\\Área de Trabalho\\2911poo\\Contact-Book-in-C-Sharp\\01.csproj",
         "packagesPath": "C:\\Users\\eduwi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eduwi\\OneDrive\\Área de Trabalho\\Nova pasta (2)\\Contact-Book-in-C-Sharp\\obj\\",
+        "outputPath": "C:\\Users\\eduwi\\OneDrive\\Área de Trabalho\\2911poo\\Contact-Book-in-C-Sharp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eduwi\\AppData\\Roaming\\NuGet\\NuGet.Config"

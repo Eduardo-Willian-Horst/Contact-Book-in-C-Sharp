@@ -11,8 +11,7 @@ class Empresarial : Contato
     public string Email
     {
         get { return email; }
-        set { //this.email = value; 
-        throw new Exception("drgggggggg");}
+        set { this.email = value;}
     }
 
     public string Endereco
@@ -33,6 +32,7 @@ class Empresarial : Contato
     public Empresarial(string nome, string numeroTelefone, string email, string endereco)
         : base(nome, numeroTelefone) // Chama o construtor da classe base para inicializar os atributos id, nome e numeroTelefone
     {
+        //Regra de Negocio
         if(IsEmailValido(email)){
             this.email = email;
         }else{
