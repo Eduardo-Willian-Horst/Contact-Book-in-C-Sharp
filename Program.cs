@@ -10,7 +10,7 @@ namespace _01Conceito
         {
             
             List<Contato> ListaDeContatos = new List<Contato>();
-            List<Cidade> ListaDeCidades = new List<Cidade>();
+           
 
              
 
@@ -23,12 +23,12 @@ namespace _01Conceito
 
             try{
                 Contato Contato1 = new Amigo("Eduardo", "54991139901", "dudu", PassoFundo);
-                Contato Contato2 = new Amigo("Lucas", "5499123", "luquinhas");
+                Contato Contato2 = new Amigo("Lucas", "54991239096", "luquinhas");
                 Contato Contato3 = new Amigo("Andre", "55981234344", "degua", Ibiruba);
                 Contato Contato4 = new Familia("Joao", "55981238855", "Primo", Palmas);
                 Contato Contato5 = new Empresarial("Financeira Dinheiro a Vista", "55957837890", "financeira@gmayl.com", "Rua das Flores", RioDeJaneiro);
                 Contato Contato6 = new Empresarial("Pedreiro Clovis", "55123467457", "clovis@hottmail.com", "Rua Sao Cristovao", Palmas);
-                Contato Contato7 = new Amigo("Eduardo", "54991139901", "dudu", "Sao Paulo", "SP");
+                Contato Contato7 = new Amigo("Eduardo", "54991137901", "dudu", "Sao Paulo", "SP");
                 ListaDeContatos.Add(Contato1);
                 ListaDeContatos.Add(Contato2);
                 ListaDeContatos.Add(Contato3);
@@ -47,6 +47,9 @@ namespace _01Conceito
                 Console.WriteLine(ListaDeContatos[i]);
             }
             
+            for( int i = 0; i < Cidade.ListaDeCidades.Count; i++){
+                Console.WriteLine(Cidade.ListaDeCidades[i]);
+            }
             
         }
     }

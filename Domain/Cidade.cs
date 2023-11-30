@@ -4,12 +4,13 @@ using System;
 class Cidade
 {
     // Atributos privados
+
     private static int contadorIds = 1; // Variável estática para controlar os IDs das cidades
     private int id;
     private string nome;
     private string uf;
-
-    private static List<Contato> ListaDeContatos = new List<Contato>();
+    public static List<Cidade> ListaDeCidades = new List<Cidade>();
+    
 
     // Propriedades públicas para acesso aos atributos encapsulados
     public int Id
@@ -37,6 +38,7 @@ class Cidade
         contadorIds++; // Incrementa o contador para o próximo ID disponível
         this.nome = nome;
         this.uf = uf;
+        ListaDeCidades.Add(this);
     }
 
     // Método ToString para exibir informações da cidade
