@@ -37,8 +37,4 @@ git clone https://github.com/seuusuario/seuprojeto.git
 ## Contribuição
 Contribuições são bem-vindas! Sinta-se à vontade para enviar pull requests ou abrir issues para melhorias, correções de bugs ou novas funcionalidades.
 
-## Autor
-Seu nome ou informações do grupo de desenvolvimento.
 
-## Licença
-Este projeto está licenciado sob a [Licença XYZ](link-da-licenca).
